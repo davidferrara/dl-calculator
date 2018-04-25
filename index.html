@@ -13,24 +13,49 @@
     <header>
         <h2>Welcome to the</h2>
         <h1>Download Calculator</h1>
-        <p>To use this calculator, just input your stuff boi.</p>
+        <p>To use this calculator, just input the download rate and the Total amount to be downloaded. When you're ready, click submit.</p>
     </header>
 
     <main>
         <section>
             <h3>Input</h3>
-            <!--<input type="number" -->
+            <form action="" id="inputform" onsubmit="">
+                <div>
+                    <label>Rate: </label>
+                    <input type="number">
+                    <select name="unit">
+                        <option value="kilobyte">KB</option>
+                        <option value="megabyte">MB</option>
+                        <option value="gigabyte">GB</option>
+                    </select>
+                    <label>/</label>
+                    <input type="number">
+                    <select name="time-unit">
+                        <option value="second">SEC</option>
+                        <option value="minuite">MIN</option>
+                        <option value="hour">HR</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Total: </label>
+                    <input type="number">
+                    <select name="unit">
+                        <option value="kilobyte">KB</option>
+                        <option value="megabyte">MB</option>
+                        <option value="gigabyte">GB</option>
+                    </select>
+                </div>
+                <input type="submit">
+            </form>
         </section>
 
         <section>
             <h3>Output</h3>
+            <h1>GUH HOI</h1>
+            <p id="output"></p>
         </section>
 
     </main>
-
-    <footer>
-
-    </footer>
 </body>
 
 </html>
