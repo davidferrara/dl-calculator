@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DL CALCULATOR</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script src="script.js"></script>
 </head>
 
 <body>
@@ -19,17 +18,17 @@
     <main>
         <section>
             <h3>Input</h3>
-            <form action="" id="inputform" onsubmit="">
+            <form action="" name="inputform">
                 <div>
                     <label>Rate: </label>
-                    <input type="number">
-                    <select name="unit">
+                    <input type="number" name="digital-number">
+                    <select name="digital-unit">
                         <option value="kilobyte">KB</option>
                         <option value="megabyte">MB</option>
                         <option value="gigabyte">GB</option>
                     </select>
                     <label>/</label>
-                    <input type="number">
+                    <input type="number" name="time-number">
                     <select name="time-unit">
                         <option value="second">SEC</option>
                         <option value="minuite">MIN</option>
@@ -38,14 +37,14 @@
                 </div>
                 <div>
                     <label>Total: </label>
-                    <input type="number">
-                    <select name="unit">
+                    <input type="number" name="total-number">
+                    <select name="total-unit">
                         <option value="kilobyte">KB</option>
                         <option value="megabyte">MB</option>
                         <option value="gigabyte">GB</option>
                     </select>
                 </div>
-                <input type="submit">
+                <button type="button" name="calculateButton" onclick="">CALCULATE</button>
             </form>
         </section>
 
@@ -56,6 +55,7 @@
         </section>
 
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
