@@ -12,7 +12,7 @@
     <header>
         <h2>Welcome to the</h2>
         <h1>Download Calculator</h1>
-        <p>To use this calculator, just input the download rate and the Total amount to be downloaded. When you're ready, click submit.</p>
+        <p>To use this calculator, just input the download rate and the Total amount to be downloaded. When you're ready, click CALCULATE.</p>
     </header>
 
     <main>
@@ -21,14 +21,14 @@
             <form action="" name="inputform">
                 <div>
                     <label>Rate: </label>
-                    <input type="number" name="digital-number">
+                    <input type="number" name="digital-number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
                     <select name="digital-unit">
                         <option value="kilobyte">KB</option>
                         <option value="megabyte">MB</option>
                         <option value="gigabyte">GB</option>
                     </select>
                     <label>/</label>
-                    <input type="number" name="time-number">
+                    <input type="number" name="time-number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
                     <select name="time-unit">
                         <option value="second">SEC</option>
                         <option value="minuite">MIN</option>
@@ -37,14 +37,14 @@
                 </div>
                 <div>
                     <label>Total: </label>
-                    <input type="number" name="total-number">
+                    <input type="number" name="total-number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
                     <select name="total-unit">
                         <option value="kilobyte">KB</option>
                         <option value="megabyte">MB</option>
                         <option value="gigabyte">GB</option>
                     </select>
                 </div>
-                <button type="button" name="calculateButton" onclick="">CALCULATE</button>
+                <button type="button" name="calculateButton" onclick="calculate()">CALCULATE</button>
             </form>
         </section>
 
