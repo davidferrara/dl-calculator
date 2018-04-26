@@ -51,6 +51,15 @@ function convertToGB(unitType) {
     return result;
 }
 
+function playAudio() {
+    document.getElementById("ding-sound").play();
+}
+
+function display() {
+    var answer = calculate()
+    document.getElementById("output").innerHTML = "Your expected download time is " + answer + "SEC";
+}
+
 /*------------------------------------------------------------------
 Calculate the downloading time based on the total to be downnloaded
 and the rate at which it is being downloaded.
@@ -63,10 +72,11 @@ function calculate() {
     total = convertToGB(totalUnitType);
 
     result = (y * total) / x;
-
-    alert("Rate: " + x + "MB/" + y + "SEC" + " Total: " + total);
-
-
-    document.getElementById("output").innerHTML = "Your expected download time is " + result + "SEC";
     return result;
+}
+
+function begin() {
+    document.getElementById("typing-sound").play();
+    setTimeout(playAudio, 7000);
+    setTimeout(display, 7000);
 }
