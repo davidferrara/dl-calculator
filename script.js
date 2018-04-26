@@ -20,7 +20,7 @@ function getFormInfo() {
 
 // Converts the time into seconds from minutes or hours.
 function convertToSec(unitType) {
-    var result = 0;
+    var result = y;
     if (unitType == "minuite") {
         result = y * 60;
     } else if (unitType == "hour") {
@@ -31,7 +31,7 @@ function convertToSec(unitType) {
 
 // Converts the the digital units into megabytes from kilobytes or gigabytes.
 function convertToMB(unitType) {
-    var result = 0;
+    var result = x;
     if (unitType == "kilobyte") {
         result = x / 1024;
     } else if (unitType == "gigabyte") {
@@ -42,7 +42,7 @@ function convertToMB(unitType) {
 
 // Converts the total units into gigabytes.
 function convertToGB(unitType) {
-    var result = 0;
+    var result = total;
     if (unitType == "kilobyte") {
         result = total / 1024 / 1024;
     } else if (unitType == "megabyte") {
@@ -67,6 +67,6 @@ function calculate() {
     alert("Rate: " + x + "MB/" + y + "SEC" + " Total: " + total);
 
 
-    document.getElementById("output").innerHTML = "Your expected download time is " + result;
+    document.getElementById("output").innerHTML = "Your expected download time is " + result + "SEC";
     return result;
 }
