@@ -5,57 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DL CALCULATOR</title>
+    <link href="https://fonts.googleapis.com/css?family=Gugi|Share+Tech+Mono" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <audio id="typing-sound" src="audio/typing.mp3" preload="auto"></audio>
     <audio id="ding-sound" src="audio/ding.mp3" preload="auto"></audio>
+    <audio id="alarm-sound" src="audio/alarm.mp3" preload="auto"></audio>
 </head>
 
 <body>
-    <header>
-        <h2>Welcome to the</h2>
-        <h1>Download Calculator</h1>
-        <p>To use this calculator, just input the download rate and the Total amount to be downloaded. When you're ready, click CALCULATE.</p>
-    </header>
+    <div class="container">
+        <img id="background" src="images/clock-baground.jpg" alt="A picture of a clock.">
+        <div class="header">
+            <h2>Welcome to the</h2>
+            <h1>Download Calculator</h1>
+        </div>
+    </div>
 
-    <main>
-        <section>
-            <h3>Input</h3>
-            <form action="" name="inputform">
-                <div>
-                    <label>Rate: </label>
-                    <input type="number" name="digital-number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
-                    <select name="digital-unit">
+    <div id="input-container">
+        <h3>Input</h3>
+        <form action="" name="inputform">
+            <div>
+                <label>Rate: </label>
+                <input type="number" name="digital-number" min="0.01" step="0.01">
+                <select name="digital-unit">
                         <option value="kilobyte">KB</option>
                         <option value="megabyte">MB</option>
                         <option value="gigabyte">GB</option>
                     </select>
-                    <label>/</label>
-                    <input type="number" name="time-number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
-                    <select name="time-unit">
+                <label>/</label>
+                <input type="number" name="time-number" min="0.01" step="0.01">
+                <select name="time-unit">
                         <option value="second">SEC</option>
                         <option value="minuite">MIN</option>
                         <option value="hour">HR</option>
                     </select>
-                </div>
-                <div>
-                    <label>Total: </label>
-                    <input type="number" name="total-number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
-                    <select name="total-unit">
+            </div>
+            <div>
+                <label>Total: </label>
+                <input type="number" name="total-number" min="0.01" step="0.01">
+                <select name="total-unit">
                         <option value="kilobyte">KB</option>
                         <option value="megabyte">MB</option>
                         <option value="gigabyte">GB</option>
                     </select>
-                </div>
-                <button type="button" name="calculateButton" onclick="begin()">CALCULATE</button>
-            </form>
-        </section>
+            </div>
+            <button type="button" name="calculateButton" onclick="begin()">CALCULATE</button>
+        </form>
+    </div>
 
-        <section>
-            <h3>Output</h3>
-            <h1 id="output"></h1>
-        </section>
-
-    </main>
+    <div id="output-container">
+        <h3>Output</h3>
+        <h1 id="output"></h1>
+        <h1 id="countdown"></h1>
+    </div>
     <script src="script.js"></script>
 </body>
 
