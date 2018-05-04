@@ -11,36 +11,49 @@ body {
     margin: 0%;
 }
 
-.container {
-    position: relative;
+h3 {
+    font-family: Gugi;
+}
+
+h2 {
+    font-family: Gugi;
+}
+
+h1 {
+    font-family: Share Tech Mono;
+}
+
+.content-wrap {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0, auto;
+    padding: 50px;
 }
 
 
 /* Header
 -------------------------------------------------*/
 
-.header {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    background-color: black;
-    color: white;
-}
-
-
-/*.header h1,
-.header h2 {} */
-
-#background {
-    display: block;
-    max-width: 100%;
-    height: auto;
+#header-container {
+    background: brown;
+    text-align: center;
 }
 
 
 /* Input
 -------------------------------------------------*/
 
+#input-container {
+    background: aquamarine;
+    text-align: center;
+}
+
 
 /* Output
 -------------------------------------------------*/
+
+#output-container {
+    background: beige;
+    text-align: center;
+    padding-bottom: 50px;
+}
